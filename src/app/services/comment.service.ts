@@ -10,7 +10,7 @@ import { Response } from '../Response';
 })
 export class CommentService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}api/moments`;
+  private apiUrl = `${this.baseApiUrl}moments`;
 
   constructor(private http: HttpClient) {}
 
