@@ -18,11 +18,7 @@
     </button>
   </div>
   <div class="comments">
-    <!-- <h3>
-      Comentários ({{
-        moment.comments!.length > 0 ? moment.comments!.length : 0
-      }}):
-    </h3>
+    <h3>Comentários ({{ moment.comments!.length }}):</h3>
     <div *ngIf="moment.comments!.length > 0; else noComments">
       <div>
         <div class="comment-container" *ngFor="let comment of moment.comments">
@@ -73,6 +69,5 @@
       </div>
       <input type="submit" value="Comentar!" />
     </form>
-  </div> -->
   </div>
 </div>
