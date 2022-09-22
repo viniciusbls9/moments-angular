@@ -16,7 +16,14 @@ export class MomentService {
   constructor(private http: HttpClient) {}
 
   getMoments(): Observable<Response<Moment[]>> {
-    return this.http.get<Response<Moment[]>>(this.apiUrl);
+    return this.http.get<Response<Moment[]>>(this.apiUrl, {
+      headers: {
+        'Access-Control-Allow-Origin': [
+          'https://viniciusbls9.github.io',
+          'https://angular-adonis.herokuapp.com/moments',
+        ],
+      },
+    });
   }
 
   getMoment(id: number): Observable<Response<Moment>> {
